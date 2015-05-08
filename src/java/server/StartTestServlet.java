@@ -101,6 +101,7 @@ public class StartTestServlet extends HttpServlet {
     }// </editor-fold>
 
     private List<Question> createTest() {
+        //TODO: Если один блок - здесь его обрабатываем, перемешиваем м копируем в result
         List<Question> b1 = new ArrayList<>(block1);
         List<Question> b2 = new ArrayList<>(block2);
         List<Question> b3 = new ArrayList<>(block3);
@@ -124,21 +125,11 @@ public class StartTestServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
+        // TODO: Если все тесты из одного блока - он здесь должен загружаться
             block1 = readBlock("q1.txt");
             block2 = readBlock("q2.txt");
             block3 = readBlock("q3.txt");
             block4 = readBlock("q4.txt");
-
-//        try (BufferedReader in = new BufferedReader(new FileReader("testtraining.ini"))){
-//            String dirname = in.readLine();
-////            block1 = readBlock(dirname+"/q1.txt");
-////            block2 = readBlock(dirname+"/q2.txt");
-////            block3 = readBlock(dirname+"/q3.txt");
-////            block4 = readBlock(dirname+"/q4.txt");
-//        } catch (IOException ex) {
-//            Logger.getLogger(StartTestServlet.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-        
     }
 
     private List<Question> readBlock(String fileName) {
