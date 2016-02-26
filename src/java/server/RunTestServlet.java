@@ -38,7 +38,7 @@ public class RunTestServlet extends HttpServlet {
             String pict = question.getPicture();
             String picture = "";
             if (!pict.trim().isEmpty()){
-                picture = "<img src=\"http://berkut.homelinux.com/download/test/img/"+pict+"\" /> <br/>";
+                picture = "<img src=\"http://www.berkut.mk.ua/download/test/img/"+pict+"\" /> <br/>";
             }
             request.setAttribute("picture", picture);
             AnswerVariant av = new AnswerVariant(question.getAnswers(), answer);

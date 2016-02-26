@@ -134,7 +134,7 @@ public class StartTestServlet extends HttpServlet {
 
     private List<Question> readBlock(String fileName) {
         List<Question> block = new ArrayList<>();
-        try (InputStream openStream = new URL("http://berkut.homelinux.com/download/test/"+fileName).openStream()) { // url
+        try (InputStream openStream = new URL("http://www.berkut.mk.ua/download/test/"+fileName).openStream()) { // url
             //BufferedReader in = new BufferedReader(new FileReader(fileName));
             
             BufferedReader in = new BufferedReader(new InputStreamReader(openStream, "cp1251")); // url
